@@ -1,0 +1,24 @@
+{
+  "name": "get-wcag",
+  "version": "1.0.0",
+  "description": "Scrapes the WCAG 2.1 specs for all the Level AA success criteria and creates a CSV file containing the success criterion number, short label, level, and link to understanding document.",
+  "main": "bin/index.js",
+  "bin": {
+    "get-wcag": "/bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wcag",
+    "screen scraper"
+  ],
+  "author": "TimA11y",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "json2csv": "^5.0.7",
+    "node-fetch": "^3.2.9"
+  }
+}
