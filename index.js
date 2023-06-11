@@ -7,7 +7,7 @@ import * as fs from "fs";
 
 const successCriteria = [];
 
-console.log(`Retrieving WCAG 2.1 Level AA success criteria. The results will be written into a file named "wcag.csv".`);
+console.log(`Retrieving WCAG 2.1 Level AA success criteria. The results will be written into a file named "wcag.json".`);
 const response = await fetch("http://www.w3.org/tr/wcag21/");
 const body =  await response.text();
 const $ = cheerio.load(body);
@@ -34,5 +34,5 @@ $("section.sc").each((i, e) => {
 });
 
 const csv = json2csv.parse(successCriteria);
-console.log("Writing csv file.");
-fs.writeFileSync("wcag.csv", csv, {"encoding": "utf-8"});
+console.log("Writing JSON file.");
+fs.writeFileSync("wcag.json", JSON.stringify(successCriteria), {"encoding": "utf-8"});
