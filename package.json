@@ -17,6 +17,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@json2csv/plainjs": "^7.0.6",
     "cheerio": "^1.0.0-rc.12",
     "json2csv": "^5.0.7",
     "node-fetch": "^3.2.9"
